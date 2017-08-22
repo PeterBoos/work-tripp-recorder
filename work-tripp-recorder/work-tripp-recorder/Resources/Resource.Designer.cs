@@ -41,11 +41,54 @@ namespace work_tripp_recorder
 			}
 		}
 		
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f040004
+			public const int btnCompilationDay = 2130968580;
+			
+			// aapt resource value: 0x7f040005
+			public const int btnCompilationPeriod = 2130968581;
+			
+			// aapt resource value: 0x7f040003
+			public const int btnListAllReports = 2130968579;
+			
+			// aapt resource value: 0x7f040002
+			public const int btnNewReport = 2130968578;
+			
+			// aapt resource value: 0x7f040008
+			public const int etxDate = 2130968584;
+			
+			// aapt resource value: 0x7f040000
+			public const int gridLayout1 = 2130968576;
+			
+			// aapt resource value: 0x7f040006
+			public const int linearLayout1 = 2130968582;
+			
+			// aapt resource value: 0x7f040007
+			public const int txvDate = 2130968583;
+			
+			// aapt resource value: 0x7f040001
+			public const int txvMainTitle = 2130968577;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Id()
+			{
+			}
+		}
+		
 		public partial class Layout
 		{
 			
 			// aapt resource value: 0x7f020000
 			public const int Main = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int NewReport = 2130837505;
 			
 			static Layout()
 			{

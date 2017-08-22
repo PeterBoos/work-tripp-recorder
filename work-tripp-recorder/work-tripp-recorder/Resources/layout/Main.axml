@@ -3,5 +3,50 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/gridLayout1"
+        android:rowCount="4"
+        android:columnCount="2"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:text="Tjänsteresa!"
+            android:id="@+id/txvMainTitle"
+            android:layout_columnSpan="2"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:padding="10px"
+            style="@android:style/TextAppearance.DeviceDefault.Large" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="240px"
+            android:text="Rapportera"
+            android:id="@+id/btnNewReport"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="240px"
+            android:text="Se alla"
+            android:id="@+id/btnListAllReports"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="240px"
+            android:text="Dag"
+            android:id="@+id/btnCompilationDay"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="240px"
+            android:text="Period"
+            android:id="@+id/btnCompilationPeriod"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1" />
+    </GridLayout>
 </LinearLayout>
