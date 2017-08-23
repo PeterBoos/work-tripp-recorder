@@ -1,4 +1,6 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
+using Android.Content;
 using Android.Widget;
 using Android.OS;
 
@@ -10,9 +12,26 @@ namespace work_tripp_recorder
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Set our view from the "main" layout resource
+            
             SetContentView(Resource.Layout.Main);
+
+            var btnAddReport = FindViewById<Button>(Resource.Id.btnNewReport);
+            var btnListReports = FindViewById<Button>(Resource.Id.btnListAllReports);
+
+            btnAddReport.Click += BtnAddReport_Click;
+            btnListReports.Click += BtnListReports_Click;
+        }
+
+        private void BtnAddReport_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(NewReportActivity));
+            StartActivity(intent);
+        }
+
+        private void BtnListReports_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(ListReportsActivty));
+            StartActivity(intent);
         }
     }
 }

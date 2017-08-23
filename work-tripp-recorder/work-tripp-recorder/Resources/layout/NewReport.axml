@@ -9,16 +9,170 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1">
+        android:id="@+id/linearLayout1"
+        android:paddingLeft="5px"
+        android:paddingTop="5px"
+        android:paddingRight="5px">
         <TextView
             android:text="Datum"
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
             android:layout_height="match_parent"
-            android:id="@+id/txvDate" />
+            android:layout_weight="1"
+            android:id="@+id/txvDate"
+            android:gravity="center_vertical" />
         <EditText
             android:inputType="date"
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
             android:layout_height="match_parent"
-            android:id="@+id/etxDate" />
+            android:layout_weight="2"
+            android:id="@+id/txtDate" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:paddingLeft="5px"
+        android:paddingTop="5px"
+        android:paddingRight="5px">
+        <TextView
+            android:text="Från ort"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txvFromCity"
+            android:gravity="center_vertical" />
+        <EditText
+            android:inputType="text"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/txtFromCity" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3"
+        android:paddingLeft="5px"
+        android:paddingTop="5px"
+        android:paddingRight="5px">
+        <TextView
+            android:text="Till ort"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txvToCity"
+            android:gravity="center_vertical" />
+        <EditText
+            android:inputType="text"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/txtToCity" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4"
+        android:paddingLeft="5px"
+        android:paddingTop="5px"
+        android:paddingRight="5px">
+        <TextView
+            android:text="Företag/Person"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txvCompanyPerson"
+            android:gravity="center_vertical" />
+        <EditText
+            android:inputType="text"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/txtCompanyPerson" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout5"
+        android:paddingLeft="5px"
+        android:paddingTop="5px"
+        android:paddingRight="5px">
+        <TextView
+            android:text="Ärende"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txvPurpose"
+            android:gravity="center_vertical" />
+        <EditText
+            android:inputType="text"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/txtPurpose" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout6"
+        android:paddingLeft="5px"
+        android:paddingTop="5px"
+        android:paddingRight="5px">
+        <TextView
+            android:text="Mätarställning start"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txvMileageStart"
+            android:gravity="center_vertical" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/txtMileageStart" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout7"
+        android:paddingLeft="5px"
+        android:paddingTop="5px"
+        android:paddingRight="5px">
+        <TextView
+            android:text="Mätarställning start"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txvMileageEnd"
+            android:gravity="center_vertical" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/txtMileageEnd" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout7"
+        android:paddingLeft="5px"
+        android:paddingTop="5px"
+        android:paddingRight="5px"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <Button
+            android:text="Spara"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btnSaveReport" />
     </LinearLayout>
 </LinearLayout>
