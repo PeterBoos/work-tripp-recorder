@@ -42,8 +42,11 @@ namespace work_tripp_recorder
                 convertView = context.LayoutInflater.Inflate(Resource.Layout.ItemRowView, null);
             }
             convertView.FindViewById<TextView>(Resource.Id.txtName).Text = item.ReadableTitle;
-            convertView.FindViewById<TextView>(Resource.Id.txtDate).Text = item.Date.ToString("yyyy-MM-dd hh:mm");
-            convertView.FindViewById<TextView>(Resource.Id.txtVisitedEntity).Text = item.VisitedEntity;
+            //convertView.FindViewById<TextView>(Resource.Id.txtDate).Text = item.Date.ToString("yyyy-MM-dd hh:mm");
+            convertView.FindViewById<TextView>(Resource.Id.txtDate).Text = item.Date.ToShortDateString();
+            convertView.FindViewById<TextView>(Resource.Id.txtTotalMileage).Text = 
+                item.MileageEnd == 0 ? "-" : (item.MileageEnd - item.MileageStart).ToString();
+            convertView.FindViewById<TextView>(Resource.Id.txtVisited).Text = item.VisitedEntity;
 
             return convertView;
         }

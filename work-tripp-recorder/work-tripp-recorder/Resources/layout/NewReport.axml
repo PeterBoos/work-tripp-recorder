@@ -20,12 +20,27 @@
             android:layout_weight="1"
             android:id="@+id/txvDate"
             android:gravity="center_vertical" />
-        <EditText
-            android:inputType="date"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout8"
             android:layout_width="0px"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:id="@+id/txtDate" />
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+            <TextView
+                android:text=""
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:id="@+id/txvSelectedDate"
+                android:gravity="center_vertical" />
+            <Button
+                android:text="Pick"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/btnPickDate"
+                android:gravity="center_vertical" />
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"

@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
+using work_tripp_recorder.Utilities;
 
 namespace work_tripp_recorder
 {
@@ -17,15 +12,18 @@ namespace work_tripp_recorder
     {
         private static ItemRepositoryNotAsync database;
 
-        EditText txtDate;
+        TextView txvSelectedDate;
+        Button btnPickDate;
         EditText txtFromCity;
         EditText txtToCity;
         EditText txtCompanyPerson;
         EditText txtPurpose;
         EditText txtMileageStart;
         EditText txtMileageEnd;
-
+        
         Button btnSaveReport;
+
+        DateTime startDate;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -42,7 +40,8 @@ namespace work_tripp_recorder
 
         void LoadViewItems()
         {
-            txtDate = FindViewById<EditText>(Resource.Id.txtDate);
+            txvSelectedDate = FindViewById<TextView>(Resource.Id.txvSelectedDate);
+            btnPickDate = FindViewById<Button>(Resource.Id.btnPickDate);
             txtFromCity = FindViewById<EditText>(Resource.Id.txtFromCity);
             txtToCity = FindViewById<EditText>(Resource.Id.txtToCity);
             txtCompanyPerson = FindViewById<EditText>(Resource.Id.txtCompanyPerson);
@@ -51,13 +50,25 @@ namespace work_tripp_recorder
             txtMileageEnd = FindViewById<EditText>(Resource.Id.txtMileageEnd);
 
             btnSaveReport = FindViewById<Button>(Resource.Id.btnSaveReport);
+
+            btnPickDate.Click += BtnPickDate_Click;
+        }
+
+        private void BtnPickDate_Click(object sender, EventArgs e)
+        {
+            DatePickerFragment frag = DatePickerFragment.NewInstance(delegate (DateTime time)
+            {
+                txvSelectedDate.Text = time.ToShortDateString();
+                startDate = time.Date;
+            });
+            frag.Show(FragmentManager, DatePickerFragment.TAG);
         }
 
         private void BtnSaveReport_Click(object sender, System.EventArgs e)
         {
             var item = new Item
             {
-                Date = Convert.ToDateTime(txtDate.Text),
+                Date = startDate,
                 CityStart = txtFromCity.Text,
                 CityEnd = txtToCity.Text,
                 VisitedEntity = txtCompanyPerson.Text,
