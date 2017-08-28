@@ -50,6 +50,12 @@ namespace work_tripp_recorder
 			// aapt resource value: 0x7f04000a
 			public const int btnCompilationPeriod = 2130968586;
 			
+			// aapt resource value: 0x7f040033
+			public const int btnDetailEdit = 2130968627;
+			
+			// aapt resource value: 0x7f04003b
+			public const int btnEditSave = 2130968635;
+			
 			// aapt resource value: 0x7f040008
 			public const int btnListAllReports = 2130968584;
 			
@@ -98,14 +104,74 @@ namespace work_tripp_recorder
 			// aapt resource value: 0x7f040001
 			public const int txtDate = 2130968577;
 			
+			// aapt resource value: 0x7f040023
+			public const int txtDateLabel = 2130968611;
+			
+			// aapt resource value: 0x7f040024
+			public const int txtDetailDate = 2130968612;
+			
+			// aapt resource value: 0x7f040032
+			public const int txtDetailDistance = 2130968626;
+			
+			// aapt resource value: 0x7f040026
+			public const int txtDetailFromCity = 2130968614;
+			
+			// aapt resource value: 0x7f040030
+			public const int txtDetailMileageEnd = 2130968624;
+			
+			// aapt resource value: 0x7f04002e
+			public const int txtDetailMileageStart = 2130968622;
+			
+			// aapt resource value: 0x7f04002c
+			public const int txtDetailPurpose = 2130968620;
+			
+			// aapt resource value: 0x7f040028
+			public const int txtDetailToCity = 2130968616;
+			
+			// aapt resource value: 0x7f04002a
+			public const int txtDetailVisited = 2130968618;
+			
+			// aapt resource value: 0x7f040031
+			public const int txtDistance = 2130968625;
+			
+			// aapt resource value: 0x7f040034
+			public const int txtEditDate = 2130968628;
+			
+			// aapt resource value: 0x7f040035
+			public const int txtEditFromCity = 2130968629;
+			
+			// aapt resource value: 0x7f04003a
+			public const int txtEditMileageEnd = 2130968634;
+			
+			// aapt resource value: 0x7f040039
+			public const int txtEditMileageStart = 2130968633;
+			
+			// aapt resource value: 0x7f040038
+			public const int txtEditPurpose = 2130968632;
+			
+			// aapt resource value: 0x7f040036
+			public const int txtEditToCity = 2130968630;
+			
+			// aapt resource value: 0x7f040037
+			public const int txtEditVisited = 2130968631;
+			
 			// aapt resource value: 0x7f040012
 			public const int txtFromCity = 2130968594;
+			
+			// aapt resource value: 0x7f040025
+			public const int txtFromCityLabel = 2130968613;
 			
 			// aapt resource value: 0x7f040021
 			public const int txtMileageEnd = 2130968609;
 			
+			// aapt resource value: 0x7f04002f
+			public const int txtMileageEndLabel = 2130968623;
+			
 			// aapt resource value: 0x7f04001e
 			public const int txtMileageStart = 2130968606;
+			
+			// aapt resource value: 0x7f04002d
+			public const int txtMileageStartLabel = 2130968621;
 			
 			// aapt resource value: 0x7f040000
 			public const int txtName = 2130968576;
@@ -113,14 +179,23 @@ namespace work_tripp_recorder
 			// aapt resource value: 0x7f04001b
 			public const int txtPurpose = 2130968603;
 			
+			// aapt resource value: 0x7f04002b
+			public const int txtPurposeLabel = 2130968619;
+			
 			// aapt resource value: 0x7f040015
 			public const int txtToCity = 2130968597;
+			
+			// aapt resource value: 0x7f040027
+			public const int txtToCityLabel = 2130968615;
 			
 			// aapt resource value: 0x7f040002
 			public const int txtTotalMileage = 2130968578;
 			
 			// aapt resource value: 0x7f040003
 			public const int txtVisited = 2130968579;
+			
+			// aapt resource value: 0x7f040029
+			public const int txtVisitedLabel = 2130968617;
 			
 			// aapt resource value: 0x7f040017
 			public const int txvCompanyPerson = 2130968599;
@@ -173,6 +248,12 @@ namespace work_tripp_recorder
 			
 			// aapt resource value: 0x7f020003
 			public const int NewReport = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int ReportDetails = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int ReportEdit = 2130837509;
 			
 			static Layout()
 			{

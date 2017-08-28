@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:padding="10px">
+        <TextView
+            android:text="Datum"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtDateLabel"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <EditText
+            android:text="Testtext"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtEditDate"
+            android:gravity="center_vertical"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:padding="10px">
+        <TextView
+            android:text="Från ort"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtFromCityLabel"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <EditText
+            android:text="Testtext"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtEditFromCity"
+            android:gravity="center_vertical"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:padding="10px">
+        <TextView
+            android:text="Till ort"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtToCityLabel"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <EditText
+            android:text="Testtext"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtEditToCity"
+            android:gravity="center_vertical"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:padding="10px">
+        <TextView
+            android:text="Företag/person"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtVisitedLabel"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <EditText
+            android:text="Testtext"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtEditVisited"
+            android:gravity="center_vertical"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:padding="10px">
+        <TextView
+            android:text="Syfte"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtPurposeLabel"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <EditText
+            android:text="Testtext"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtEditPurpose"
+            android:gravity="center_vertical"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:padding="10px">
+        <TextView
+            android:text="Mätare start"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtMileageStartLabel"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <EditText
+            android:text="Testtext"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtEditMileageStart"
+            android:gravity="center_vertical"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:padding="10px">
+        <TextView
+            android:text="Mätare slut"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtMileageEndLabel"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <EditText
+            android:text="Testtext"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/txtEditMileageEnd"
+            android:gravity="center_vertical"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:padding="10px"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <Button
+            android:text="Spara"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btnEditSave"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20px" />
+    </LinearLayout>
+</LinearLayout>

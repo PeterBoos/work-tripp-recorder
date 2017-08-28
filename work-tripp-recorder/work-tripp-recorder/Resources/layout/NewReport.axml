@@ -161,7 +161,7 @@
         android:paddingTop="5px"
         android:paddingRight="5px">
         <TextView
-            android:text="Mätarställning start"
+            android:text="Mätarställning slut"
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"

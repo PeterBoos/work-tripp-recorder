@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Widget;
 
@@ -48,9 +49,12 @@ namespace work_tripp_recorder
             items = database.GetItems().OrderByDescending(i => i.Date).ToList();
         }
 
-        private void ItemListView_Click(object sender, EventArgs e)
+        private void ItemListView_Click(object sender, AdapterView.ItemClickEventArgs e)
         {
-            // Navigate to details page here
+            var item = items[e.Position];
+            var intent = new Intent(this, typeof(ReportDetailsActivity));
+            intent.PutExtra("ItemId", item.Id);
+            StartActivity(intent);
         }
     }
 }

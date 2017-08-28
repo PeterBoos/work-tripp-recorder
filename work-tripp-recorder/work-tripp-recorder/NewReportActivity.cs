@@ -1,6 +1,7 @@
 ﻿using System;
 
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Widget;
 using work_tripp_recorder.Utilities;
@@ -89,6 +90,9 @@ namespace work_tripp_recorder
             {
                 database.AddItem(item);
                 Toast.MakeText(this, $"Rapport sparad.", ToastLength.Long).Show();
+
+                var intent = new Intent(this, typeof(MainActivity));
+                StartActivity(intent);
             }
             catch (Exception ex)
             {
