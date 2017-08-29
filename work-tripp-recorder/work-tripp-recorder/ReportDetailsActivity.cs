@@ -84,7 +84,7 @@ namespace work_tripp_recorder
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            var intent = new Intent(this, typeof(ReportDetailsActivity));
+            var intent = new Intent(this, typeof(ReportEditActivity));
             intent.PutExtra("ItemId", item.Id);
             StartActivity(intent);
         }

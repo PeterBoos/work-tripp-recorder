@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using work_tripp_recorder.Utilities;
 
 namespace work_tripp_recorder
 {
@@ -19,7 +20,8 @@ namespace work_tripp_recorder
 
         private Item item;
 
-        private EditText txtDate;
+        private TextView txtDate;
+        private Button btnPickDate;
         private EditText txtFromCity;
         private EditText txtToCity;
         private EditText txtVisited;
@@ -27,6 +29,8 @@ namespace work_tripp_recorder
         private EditText txtMileageStart;
         private EditText txtMileageEnd;
         private Button btnSave;
+
+        private DateTime itemDate;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -50,12 +54,14 @@ namespace work_tripp_recorder
             LoadViewItems();
             LoadValues();
 
+            btnPickDate.Click += BtnPickDate_Click;
             btnSave.Click += BtnSave_Click;
         }
 
         private void LoadViewItems()
         {
-            txtDate = FindViewById<EditText>(Resource.Id.txtEditDate);
+            txtDate = FindViewById<TextView>(Resource.Id.txtEditDate);
+            btnPickDate = FindViewById<Button>(Resource.Id.btnPickDate);
             txtFromCity = FindViewById<EditText>(Resource.Id.txtEditFromCity);
             txtToCity = FindViewById<EditText>(Resource.Id.txtEditToCity);
             txtVisited = FindViewById<EditText>(Resource.Id.txtEditVisited);
@@ -74,10 +80,23 @@ namespace work_tripp_recorder
             txtPurpose.Text = item.Purpose;
             txtMileageStart.Text = item.MileageStart.ToString();
             txtMileageEnd.Text = item.MileageEnd.ToString();
+
+            itemDate = item.Date;
+        }
+
+        private void BtnPickDate_Click(object sender, EventArgs e)
+        {
+            DatePickerFragment frag = DatePickerFragment.NewInstance(delegate (DateTime time)
+            {
+                txtDate.Text = time.ToShortDateString();
+                itemDate = time.Date;
+            });
+            frag.Show(FragmentManager, DatePickerFragment.TAG);
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            item.Date = itemDate;
             item.CityStart = txtFromCity.Text;
             item.CityEnd = txtToCity.Text;
             item.VisitedEntity = txtVisited.Text;
@@ -93,7 +112,19 @@ namespace work_tripp_recorder
                 item.MileageEnd = mileageEnd;
             }
 
-            database.UpdateItem(item);
+            try
+            {
+                database.UpdateItem(item);
+                Toast.MakeText(this, $"Ändringar sparade.", ToastLength.Long).Show();
+            }
+            catch (Exception ex)
+            {
+                Toast.MakeText(this, $"Kunde inte spara rapport =(.", ToastLength.Long).Show();
+            }
+
+            var intent = new Intent(this, typeof(ReportDetailsActivity));
+            intent.PutExtra("ItemId", item.Id);
+            StartActivity(intent);
         }
     }
 }
