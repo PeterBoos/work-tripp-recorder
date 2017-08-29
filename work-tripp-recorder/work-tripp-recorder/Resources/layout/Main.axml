@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
+    <ImageView
+        android:src="@drawable/car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1"
+        android:layout_marginBottom="60px"
+        android:layout_marginTop="80px" />
     <GridLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -13,7 +20,7 @@
         android:columnCount="2"
         android:layout_centerHorizontal="true">
         <TextView
-            android:text="Tjänsteresa!"
+            android:text="Körjournal"
             android:id="@+id/txvMainTitle"
             android:layout_columnSpan="2"
             android:layout_width="match_parent"
@@ -23,14 +30,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="240px"
-            android:text="Rapportera"
+            android:text="Ny"
             android:id="@+id/btnNewReport"
             android:layout_gravity="fill"
             android:layout_columnWeight="1" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="240px"
-            android:text="Se alla"
+            android:text="Lista"
             android:id="@+id/btnListAllReports"
             android:layout_gravity="fill"
             android:layout_columnWeight="1" />

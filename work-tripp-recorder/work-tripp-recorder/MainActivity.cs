@@ -17,9 +17,11 @@ namespace work_tripp_recorder
 
             var btnAddReport = FindViewById<Button>(Resource.Id.btnNewReport);
             var btnListReports = FindViewById<Button>(Resource.Id.btnListAllReports);
+            var btnDay = FindViewById<Button>(Resource.Id.btnCompilationDay);
 
             btnAddReport.Click += BtnAddReport_Click;
             btnListReports.Click += BtnListReports_Click;
+            btnDay.Click += BtnDay_Click;
         }
 
         private void BtnAddReport_Click(object sender, EventArgs e)
@@ -31,6 +33,12 @@ namespace work_tripp_recorder
         private void BtnListReports_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(ListReportsActivty));
+            StartActivity(intent);
+        }
+
+        private void BtnDay_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(DayActivity));
             StartActivity(intent);
         }
     }
